@@ -11,7 +11,7 @@ pantalla = Entry(root, width=40, bg="black", fg="white", borderwidth=0, font=("a
 pantalla.grid(row=0, column=0, columnspan=10, padx=1, pady=1)
 label=Label(pantalla,width=40,height=2, bg="black", fg="white",borderwidth=0)
 label.grid(row=0, column=0)
-resultado=[0]
+resultado=0
 a,b=0,0
 
 def operador(p):
@@ -26,6 +26,8 @@ def operador(p):
         resultado=a*b
     elif p=="/" and b!=0:
         resultado=a/b
+    else:
+        resultado=a/1
     
 def operar():
     global resultado

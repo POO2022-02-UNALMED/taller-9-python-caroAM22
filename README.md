@@ -1,6 +1,6 @@
-# Taller practico tenga en cuenta...
+#Para calificar tener en cuenta
 
-Para hacer uso de la herramienta para autocalificar tu implementacion debes pegar los archivos y carpetas que se generan debes pegarlos en la carpeta especificada y al momento de realizar un commit y subirlo (push) al repositorio de GitHub se ejecutara la prueba, se daran mas indicaciones en los talleres.
+Primero se deben presionar dos números, el sistema guarda los dos primeros, posteriormente la operación que desea realizar. Si solo presiono un número, la operación se realiza con un 0, excepto en la division, donde la operación se realiza con un 1. Si no presiona ningun numero, la operación se realiza con dos ceros, excepto en la división, que toma un cero y lo divide por 1. Al presionar el botón de igual se reestablecen los valores de los números a cero y se visualiza en pantalla el resultado. 
 
 ![Logo UNAL](https://github.com/POO-UNALMED/useful/blob/master/img/escudoUnal_black.png)
 
