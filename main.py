@@ -11,39 +11,31 @@ pantalla = Entry(root, width=40, bg="black", fg="white", borderwidth=0, font=("a
 pantalla.grid(row=0, column=0, columnspan=10, padx=1, pady=1)
 label=Label(pantalla,width=40,height=2, bg="black", fg="white",borderwidth=0)
 label.grid(row=0, column=0)
-resultado=0
-a,b=0,0
+num=[0,0]
+op=["+"]
 
 def operador(p):
-    global resultado
-    global a
-    global b
-    if p=="+":
-        resultado=a+b
-    elif p=="-":
-        resultado=a-b
-    elif p=="*":
-        resultado=a*b
-    elif p=="/" and b!=0:
-        resultado=a/b
-    else:
-        resultado=a/1
+    global op
+    op.append(p)
     
 def operar():
-    global resultado
-    global a
-    global b
-    a=0
-    b=0
+    global num
+    global op
+    if op[-1]=="+":
+        resultado=num[-1]+num[-2]
+    elif op[-1]=="-":
+        resultado=num[-2]-num[-1]
+    elif op[-1]=="*":
+        resultado=num[-2]*num[-1]
+    elif op[-1]=="/" and num[-1]!=0:
+        resultado=num[-2]/num[-1]
+    else:
+        resultado=0
     label.config(text=str(resultado))
 
 def guardar(n):
-    global a
-    global b
-    if a==0:
-        a=n
-    elif a!=0 and b==0:
-        b=n
+    global num
+    num.append(n)
 
 # Configuración botones
 boton_1 = Button(root, text="1", command=lambda: guardar(1), width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=1, column=0, padx=1, pady=1)
